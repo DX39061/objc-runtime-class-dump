@@ -1,0 +1,17 @@
+{
+  "name": "objc-runtime-class-dump",
+  "version": "0.1.0",
+  "description": "dynamic class-dump from objc runtime using frida",
+  "private": true,
+  "main": "dump_methods.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "frida-compile dump_methods.ts -o dump_methods.js -c",
+    "watch": "frida-compile dump_methods.ts -o dump_methods.js -w"
+  },
+  "devDependencies": {
+    "@types/frida-gum": "^18.5.1",
+    "@types/node": "^18.19.3",
+    "frida-compile": "^16.4.1"
+  }
+}
